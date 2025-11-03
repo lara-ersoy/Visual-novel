@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# SQLite DB
+*.db
+
+# VSCode
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python build
+build/
+dist/
+*.egg-info/
