@@ -12,7 +12,7 @@ def wrap(text, width = 60):
     words, lines, cur = text.split(), [], ""
     for w in words:
         test = (cur + " " + w).strip()
-        if len(test) <= width
+        if len(test) <= width:
             cur = test
         else:
             lines.append(cur)
