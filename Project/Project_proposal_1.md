@@ -108,6 +108,8 @@ Vanuit een keuzemenu heb je verschillende aanvallen per klasse. Ik vind dit keuz
 1. UI-library: CSS
 2. Design: ibisPaint (2D), Blender (3D)
 
+---
+
 ## 6. Inhoud van de gameplay
 
 Als laatst heb ik de verhaallijn deels opgezet voor de gameplay. [OC] ben jij, de gebruiker van de game.
