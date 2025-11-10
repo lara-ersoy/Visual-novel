@@ -18,3 +18,6 @@ Zoals in 2.3 eigenlijk al vermeld, zijn de meeste DND-achtige fantasy games alle
 ---
 
 ## 3. De schets
+![Example gameplay](./Example_gameplay.PNG)
+Ik heb voor mijn voorbeeld van mijn gameplay één van de potentiële hoofdkarakters in mijn gameplay getekend op mijn iPad op ibisPaint X, vervolgens heb ik als voorbeeld achtergond een online wallpaper van The Legend of Zelda gebruikt. Sinds ik nog niet zeker ben of ik de game in 2D of 3D ga uitvoeren, heb ik 2D voor nu gehanteerd, maar heb ik nu alleen een voorbeeld van een keuzemenu opgesteld. De combat wil ik op de manier van Baldur's Gate 3 of Pokemon doen, die gameplay ziet er als volgt uit:
+![Example gameplay](./baldurs_gate.PNG)
