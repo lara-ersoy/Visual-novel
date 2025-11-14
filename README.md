@@ -30,10 +30,10 @@ Zoals in 2.3 eigenlijk al vermeld is, zijn de meeste DND-achtige fantasy games a
 ## 3. De schets
 
 Ik heb voor mijn voorbeeld van de gameplay één van de potentiële hoofdkarakters getekend op mijn iPad met ibisPaint X. Vervolgens heb ik als achtergond een online wallpaper van The Legend of Zelda gebruikt en geplakt achter mijn schets, en heb ik een beslissingsmenu toegevoegd. Voor de uiteindelijke game zal ik niet zomaar afbeeldingen van het internet halen, dan zal ik de achtergronden tekenen. Omdat ik nog niet zeker ben of ik de game in 2D of 3D ga uitvoeren, heb ik een 2D voorbeeld (cutscene) geschetst. 
-![Example gameplay](./Project/Example_gameplay.PNG)
+![Example gameplay](./Project/Pictures/README-pictures/Example_gameplay.PNG)
 
 De combat wil ik op de manier van Baldur's Gate 3 of Pokemon uitvoeren, de gameplay van BG3 ziet er als volgt uit:
-![Example gameplay](./Project/Flophouse.png)
+![Example gameplay](./Project/Pictures/README-pictures/Flophouse.png)
 
 Vanuit een keuzemenu heb je verschillende aanvallen per klasse. Ik vind dit keuzemenu verwarrend, zelf zou ik de keuzemenu één geheel maken zonder onderscheiding tussen bonus-aanvallen en normale aanvallen zoals hier het geval is; de bonus aanval kun je weergeven als nieuwe actie, nadat de gebruiker alle normale aanvallen al heeft uitgevoerd. Of ik een character creation scherm wil maken weet ik nog niet zeker, maar dat lijkt me zeker wel leuk. Wat ik wel zeker wil, is dat de gebruiker de keuze heeft om zijn of haar klasse te kiezen voor hun karakter. Wat ook een interessant idee is een combinatie van 2D & 3D te doen. 2D voor de cutscenes, waarbij een keuze wordt gemaakt & 3D voor de uiteindelijke gameplay. 
 
