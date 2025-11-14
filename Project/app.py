@@ -42,7 +42,71 @@ def init_db():
 
     connection.commit()
     connection.close()
-    
+
+def get_user_by_username(username):
+    connection = get_db()
+    create = connection.cursor()
+    create.execute("SELECT * FROM users WHERE username = ?", (username,))
+    row = create.fetchone()
+    connection.close()
+    return row 
+
+def insert_user(username, password_hash):
+    connection = get_db()
+    create = connection.cursor()
+    create.execute("INSERT INTO users (username, hash) VALUES (?,?),",
+                   (username, password_hash),
+                   )
+    connection.commit()
+    connection.close()
+
+# Login
+
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args **kwargs):
+        if session.get("user_id") is None:
+            return redirect("/login")
+        return f(*args, **kwargs)
+    return decorated_function
+
+# Routes
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        username = request.form.get("username", "").strip()
+        password = request.form.get("password", "")
+        confirmation = request.form.get("confirmation", "")
+
+        if not username or not password or not confirmation:
+            flash("Vul alle velden in.")
+            return render_template("register.html")
+        
+        if password != confirmation:
+            flash("Wachtworden komen niet overheen.")
+            return render_template("register.html")
+        
+        if password != confirmation:
+            flash("Wachtworden komen niet overheen.")
+            return render_template("register.html")
+        
+        if get_user_by_username(username) is not None:
+            flash("Gebruikersnaam bestaat al")
+            return render_template("register.html")
+        
+        pwd_hash = generate_password_hash(password) 
+        insert_user(username, pwd_hash)
+
+        flash("Account aangemaakt. Log nu in.")
+        return redirect("/login")
+    return render_template("register.html")
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/login")
+
 @app.route("/game", methods=["GET", "POST"])
 @login_required
 def game():
@@ -67,3 +131,6 @@ def game():
         
     return render_template("game.html", scene_key=current_key,scene=scene)
 
+if __name__ == "__main__":
+    init_db()
+    app.run(debug=True)
