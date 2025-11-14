@@ -1,3 +1,4 @@
+# Import in packages
 import os
 import sqlite3
 from functools import wraps
@@ -13,9 +14,12 @@ from flask import(
 )
 
 from werkzeug.security import generate_password_hash, check_password_hash
+
+# Import scenes 
 from Scenes import SCENES
+
 app = Flask(__name__)
-app.config["SECRET_KEY"]=os.environ.get("SECRET_KEY", "dev-change-this")
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-change-this")
 
 DB_PATH = "adventure.db"
 
@@ -23,13 +27,13 @@ DB_PATH = "adventure.db"
 def get_db():
     "SQLite connection"
     connection = sqlite3.connect(DB_PATH)
-    connection.row_factory=sqlite3.Row
+    connection.row_factory = sqlite3.Row
     return connection
 
 def init_db():
     "User table"
     connection = get_db()
-    create =connection.cursor()
+    create = connection.cursor()
     create.execute(
         """
         CREATE TABLE IF NOT EXISTS users (
@@ -54,9 +58,9 @@ def get_user_by_username(username):
 def insert_user(username, password_hash):
     connection = get_db()
     create = connection.cursor()
-    create.execute("INSERT INTO users (username, hash) VALUES (?,?),",
+    create.execute("INSERT INTO users (username, hash) VALUES (?,?)",
                    (username, password_hash),
-                   )
+    )
     connection.commit()
     connection.close()
 
@@ -64,7 +68,7 @@ def insert_user(username, password_hash):
 
 def login_required(f):
     @wraps(f)
-    def decorated_function(*args **kwargs):
+    def decorated_function(*args, **kwargs):
         if session.get("user_id") is None:
             return redirect("/login")
         return f(*args, **kwargs)
