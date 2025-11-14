@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block body %}
-  <h1 class="mb-3">Darkness in sunrise</h1>
+  <h1 class="mb-3">Het kelder-avontuur</h1>
 
   <div class="card bg-secondary text-light mb-3">
     {% if scene.image %}
@@ -16,7 +16,7 @@
     </div>
   </div>
 
-    <form method="post" class="d-flex flex-wrap gap-2">
+  <form method="post" class="d-flex flex-wrap gap-2">
     {% if scene.choices %}
       {% for label, target in scene.choices.items() %}
         <button
