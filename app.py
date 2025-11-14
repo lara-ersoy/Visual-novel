@@ -75,6 +75,35 @@ def login_required(f):
     return decorated_function
 
 # Routes
+@app.route("/")
+def index():
+    if session.get("user_id") is None:
+        return redirect(url_for("login"))
+    return redirect(url_for("game"))
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    session.clear()
+
+    if request.method == "POST":
+        username = request.form.get("username", "").strip()
+        password = request.form.get("password", "")
+
+        if not username or not password:
+            flash("Vul gebruikersnaam en wachtwoord in.")
+            return render_template("login.html")
+
+        user = get_user_by_username(username)
+        if user is None or not check_password_hash(user["hash"], password):
+            flash("Ongeldige gebruikersnaam en/of wachtwoord.")
+            return render_template("login.html")
+
+        session["user_id"] = user["id"]
+        session.setdefault("scene", "start")
+        return redirect(url_for("game"))
+
+    return render_template("login.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
