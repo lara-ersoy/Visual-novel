@@ -33,7 +33,7 @@ Ik heb voor mijn voorbeeld van de gameplay één van de potentiële hoofdkarakte
 ![Example gameplay](./Project/Example_gameplay.PNG)
 
 De combat wil ik op de manier van Baldur's Gate 3 of Pokemon uitvoeren, de gameplay van BG3 ziet er als volgt uit:
-![Example gameplay](./Project/Flophouse.PNG)
+![Example gameplay](./Project/Flophouse.png)
 
 Vanuit een keuzemenu heb je verschillende aanvallen per klasse. Ik vind dit keuzemenu verwarrend, zelf zou ik de keuzemenu één geheel maken zonder onderscheiding tussen bonus-aanvallen en normale aanvallen zoals hier het geval is; de bonus aanval kun je weergeven als nieuwe actie, nadat de gebruiker alle normale aanvallen al heeft uitgevoerd. Of ik een character creation scherm wil maken weet ik nog niet zeker, maar dat lijkt me zeker wel leuk. Wat ik wel zeker wil, is dat de gebruiker de keuze heeft om zijn of haar klasse te kiezen voor hun karakter. Wat ook een interessant idee is een combinatie van 2D & 3D te doen. 2D voor de cutscenes, waarbij een keuze wordt gemaakt & 3D voor de uiteindelijke gameplay. 
 
