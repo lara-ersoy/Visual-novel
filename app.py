@@ -17,7 +17,7 @@ from Scenes import SCENES
 app = Flask(__name__)
 app.config["SECRET_KEY"]=os.environ.get("SECRET_KEY", "dev-change-this")
 
-DB_PATH = ".db"
+DB_PATH = "adventure.db"
 
 # Helpers
 def get_db():
